@@ -1,5 +1,5 @@
 # Self-Hosted apps
 
 ### Dashboards
-- Heimdall
+- [Heimdall](Heimdall/Heimdallinstall.md)
 
