@@ -70,6 +70,11 @@ Para configurar el servidor como dns cache, necesitaremos dns-forwarders, estos 
   
   ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/9307d096-6b6e-41e3-9149-17d41554bfc5)
 
+  Aqui podemos ver como responde a los subdominios de roca.home:
+
+  ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/b04c6fa6-45ee-4914-85e1-bb3991f83217)
+  ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/2a70832e-35b1-4091-a1d2-06f3198f2f90)
+
 <br>
 
 ---
