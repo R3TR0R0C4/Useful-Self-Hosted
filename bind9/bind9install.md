@@ -1,4 +1,4 @@
-### Instalacion de paquetes
+## Instalacion de paquetes
 
 - Instalamos "bind9" y "dnsutils" con apt:
 
@@ -7,7 +7,7 @@
 ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/e2926197-5867-44ba-82be-a2619781f121)
 
 
-### Configuraciónes
+## Configuraciónes
 Hay varias formas de configurar bind9, puede ser como un servidor cache, servidor primario o servidor secundario:
 
 - [Como servidor cache](bind9install.md#configuración-como-servidor-cache), bind9 guardara la información de las consultas que se hacen a servidores externos (como 1.1.1.1, o 8.8.8.8).
@@ -15,7 +15,7 @@ Hay varias formas de configurar bind9, puede ser como un servidor cache, servido
 - [Como servidor secundario](bind9install.md#configuración-como-servidor-secundario), el servidor obtendrà los datos de zona desde otro servidor DNS que sea autoritario de dicha zona (un servidor primario).
 
 
-#### Configuración como servidor cache
+### Configuración como servidor cache
 Para configurar el servidor como dns cache, necesitaremos dns-forwarders, estos són los servidores que se consultaran para la primera vez que se consulte un dominio
 
 * Para configurar el servicio necesitamos editar el archivo `/etc/bind/named.conf.options` con un editor de texto_
@@ -38,25 +38,37 @@ Para configurar el servidor como dns cache, necesitaremos dns-forwarders, estos 
 <br>
 <br>
 
-#### Configuración como servidor primario
+### Configuración como servidor primario
+
+#### Configuracion archivos de zona
 
   Para configurar un servidor DNS primario, necesitaremos establecer los forwarders también como en la [configuración anterior](bind9install.md#configuración-como-servidor-cache)
 
   Necesitaremos crear una zona en el directorio, lo mas facil és usar el archivo `/etc/bind/db.empty` como plantilla no devemos borrar este archivo asi que usaremos la orden cp:
 
-  ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/74314735-6bb6-4a7d-b791-4913e2951cd3)
+  ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/2ffebbef-7021-40fd-bfaf-002681fee48d)
 
   Después editaremos el archivo con un editor de texto:
 
-  ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/87d82be4-cc43-4178-8f32-73fb22cd8f7b)
+  ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/a69588d0-2d9e-471d-ac99-f4c4b55dc09c)
 
-  Este és un ejemplo de configuración:
+  Este és un ejemplo de configuración: [db.roca.local](configZonas/zonadb.roca.home)
 
-  ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/e637ddd5-cc56-46d2-9483-31ff72667019)
+  ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/c1c2c372-4f45-4496-8550-e43fa2d50c34)
 
-  Necesitaremos cambiar `localhost.` por nuestro dominio, en mi caso `roca.local` y luego el FQDN que pasarà de ser `root.localhost.` a `root.roca.local`
+  Necesitaremos cambiar `localhost.` por nuestro dominio, en mi caso `roca.home` y luego el FQDN que pasarà de ser `root.localhost.` a `root.roca.home`
 
+  Y añadiremos una linea nueva por cada registro.
+
+#### Configuracion de zonas
+
+  Después necesitamos editar `/etc/bind/named.conf.local`
+
+  Por cada zona nueva necesitaremos añadir un nuevo "bloque" de configuración, donde indicaremos el dominio y la ubicación del archivo de zona:
+  
+  ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/9307d096-6b6e-41e3-9149-17d41554bfc5)
 
 <br>
 <br>
-#### Configuración como servidor secundario
+
+### Configuración como servidor secundario
