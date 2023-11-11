@@ -42,7 +42,7 @@ Para configurar el servidor como dns cache, necesitaremos dns-forwarders, estos 
 
 ### Configuración como servidor primario
 
-#### Configuracion archivos de zona
+#### Configuracion archivos de zona directa
 
   Para configurar un servidor DNS primario, necesitaremos establecer los forwarders también como en la [configuración anterior](bind9install.md#configuración-como-servidor-cache)
 
@@ -76,6 +76,9 @@ Para configurar el servidor como dns cache, necesitaremos dns-forwarders, estos 
   ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/2a70832e-35b1-4091-a1d2-06f3198f2f90)
 
 <br>
+
+#### Configuracion archivos de zona inversa
+
 
 ---
 
