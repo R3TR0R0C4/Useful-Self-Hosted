@@ -38,6 +38,8 @@ Para configurar el servidor como dns cache, necesitaremos dns-forwarders, estos 
 <br>
 <br>
 
+---
+
 ### Configuración como servidor primario
 
 #### Configuracion archivos de zona
@@ -69,6 +71,7 @@ Para configurar el servidor como dns cache, necesitaremos dns-forwarders, estos 
   ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/9307d096-6b6e-41e3-9149-17d41554bfc5)
 
 <br>
-<br>
+
+---
 
 ### Configuración como servidor secundario
