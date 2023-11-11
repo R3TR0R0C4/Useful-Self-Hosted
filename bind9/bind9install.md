@@ -95,9 +95,12 @@ Esta és la configuración que usuaremos para la zona inversa, al igual que ante
 
   ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/99abb2fc-438b-4f16-9b15-eb1aedadddfa)
 
+  Este és un ejemplo de configuración: [db.192.168.0](configZonas/db.192.168.0)
+
   Y podemos ver que el servidor nos responde los dominios de las IPs:
 
   ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/dec0f790-b99d-49f3-b06e-8a4ade1c9b2f)
+
 
 ---
 
