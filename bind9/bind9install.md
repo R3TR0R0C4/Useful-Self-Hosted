@@ -40,11 +40,21 @@ Para configurar el servidor como dns cache, necesitaremos dns-forwarders, estos 
 
 #### Configuración como servidor primario
 
-Para configurar un servidor DNS primario, necesitaremos establecer los forwarders también como en la [configuración anterior](bind9install.md#configuración-como-servidor-cache)
+  Para configurar un servidor DNS primario, necesitaremos establecer los forwarders también como en la [configuración anterior](bind9install.md#configuración-como-servidor-cache)
 
-Necesitaremos crear una zona en el directorio, lo mas facil és usar el archivo `/etc/bind/db.empty` como plantilla no devemos borrar este archivo asi que usaremos la orden cp:
+  Necesitaremos crear una zona en el directorio, lo mas facil és usar el archivo `/etc/bind/db.empty` como plantilla no devemos borrar este archivo asi que usaremos la orden cp:
 
-![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/74314735-6bb6-4a7d-b791-4913e2951cd3)
+  ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/74314735-6bb6-4a7d-b791-4913e2951cd3)
+
+  Después editaremos el archivo con un editor de texto:
+
+  ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/87d82be4-cc43-4178-8f32-73fb22cd8f7b)
+
+  Este és un ejemplo de configuración:
+
+  ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/e637ddd5-cc56-46d2-9483-31ff72667019)
+
+  Necesitaremos cambiar `localhost.` por nuestro dominio, en mi caso `roca.local` y luego el FQDN que pasarà de ser `root.localhost.` a `root.roca.local`
 
 
 <br>
