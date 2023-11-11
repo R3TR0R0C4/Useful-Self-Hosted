@@ -46,7 +46,7 @@ Para configurar el servidor como dns cache, necesitaremos dns-forwarders, estos 
 
   Para configurar un servidor DNS primario, necesitaremos establecer los forwarders también como en la [configuración anterior](bind9install.md#configuración-como-servidor-cache)
 
-  Necesitaremos crear una zona en el directorio, lo mas facil és usar el archivo `/etc/bind/db.empty` como plantilla no devemos borrar este archivo asi que usaremos la orden cp:
+  Necesitaremos crear una zona en el directorio, lo mas facil és usar el archivo `/etc/bind/db.empty` como plantilla no debemos borrar este archivo asi que usaremos la orden cp:
 
   ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/2ffebbef-7021-40fd-bfaf-002681fee48d)
 
@@ -79,6 +79,21 @@ Para configurar el servidor como dns cache, necesitaremos dns-forwarders, estos 
 
 #### Configuracion archivos de zona inversa
 
+  Necesitaremos crear una zona inversa en el directorio, lo mas facil és usar el archivo `/etc/bind/db.127` como plantilla, no debemos borrar este archivo asi que usaremos la orden cp:
+
+  ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/1087068d-aac6-422b-ab21-26d20c0c6bb1)
+
+Esta és la configuración que usuaremos para la zona inversa, al igual que antes, necesitaremos cambiar `localhost.` por nuestro dominio, en mi caso `roca.home` (en el caso de configurar servidores secundarios, este campo suele rellenarse con ns1.dominio.tld) y luego el FQDN que pasarà de ser `root.localhost.` a `root.roca.home.`
+
+  ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/d98adccc-b996-4183-9e80-3838977f921c)
+
+  Despues declararemos los PTR (pointers), estos en el primer campo tendràn en el primer campo el ultimo octeto de la ip (31 en este caso) IN i PTR para indicar que és una entrada que apunta a un dominio, y despues el FQDN que vamos a visitar:
+  
+  ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/e0da7173-038b-4831-95be-d638743394fd)
+
+  Después editaremos el archivo `/etc/bind/named.conf.local` y añadimos el siguiente bloque de configuración, tenemos que cambiar "0.168.192." por la IP de nuestra red, y "/etc/bind/db.192.168.0" por el nombre del archivo de la zona inversa:
+
+  ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/99abb2fc-438b-4f16-9b15-eb1aedadddfa)
 
 ---
 
