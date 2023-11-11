@@ -37,6 +37,7 @@
 ### Apache config
 
 - Creamos el archivo `/etc/apache2/sites-available/heimdall.conf` con el contenido de [heimdall.conf](heimdall.conf)
+
 `sudo nano /etc/apache2/sites-available/heimdall.conf`
 
 - Habilitamos el modulo rewrite para que las URLs del servicio funcionen correctamente:
