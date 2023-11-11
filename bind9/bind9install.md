@@ -58,7 +58,7 @@ Para configurar el servidor como dns cache, necesitaremos dns-forwarders, estos 
 
   ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/c1c2c372-4f45-4496-8550-e43fa2d50c34)
 
-  Necesitaremos cambiar `localhost.` por nuestro dominio, en mi caso `roca.home` y luego el FQDN que pasarà de ser `root.localhost.` a `root.roca.home`
+  Necesitaremos cambiar `localhost.` por nuestro dominio, en mi caso `roca.home` (en el caso de configurar servidores secundarios, este campo suele rellenarse con ns1.dominio.tld) y luego el FQDN que pasarà de ser `root.localhost.` a `root.roca.home.`
 
   Y añadiremos una linea nueva por cada registro.
 
