@@ -4,14 +4,15 @@
 ; Instead, copy it, edit named.conf, and use that copy.
 ;
 $TTL    86400
-@       IN      SOA     roca.local. root.roca.local. (
+@       IN      SOA     roca.home. root.roca.home. (
                               1         ; Serial
                          604800         ; Refresh
                           86400         ; Retry
                         2419200         ; Expire
                           86400 )       ; Negative Cache TTL
 ;DNSs
-@       IN      NS      ns.roca.local           ;Servidor DNS
-
+@       IN      NS      ns.roca.home.           ;Servidor DNS
+ns      IN      A       192.168.0.31            ;Servidor DNS
 ;IPs
-@       IN      A       192.168.0.31            ;Servidor Web
+www     IN      A       192.168.0.31            ;Servidor Web
+intranet        IN      A       192.168.0.32    ;Servidor Web Intranet
