@@ -51,7 +51,7 @@ Para configurar el servidor como dns caché, necesitaremos dns-forwarders, estos
 
   ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/a69588d0-2d9e-471d-ac99-f4c4b55dc09c)
 
-  Este es un ejemplo de configuración: [db.roca.local](configZonas/zonadb.roca.home)
+  Este es un ejemplo de configuración: [db.roca.home](configZonas/zonadb.roca.home)
 
   ![image](https://github.com/R3TR0R0C4/Useful-Self-Hosted/assets/95719205/c1c2c372-4f45-4496-8550-e43fa2d50c34)
 
