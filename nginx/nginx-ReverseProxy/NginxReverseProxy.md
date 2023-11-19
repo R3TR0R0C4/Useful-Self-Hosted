@@ -1,4 +1,5 @@
 # HTTP server
+```
 server {
     listen 80;
     server_name roca.home;
@@ -22,3 +23,4 @@ server {
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     }
 }
+```
